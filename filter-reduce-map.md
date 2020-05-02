@@ -2,11 +2,11 @@
 
 ## Filter
 
-Função que chama outra função, conhecida como CALLBACK. O callback irá conter uma regra de negócio, ou seja, vai aplicar um filtro em cada elemento do array que estamos analisando e retornar somente aquilo que aquilo atende a condição. Neste caso, o elemento é salvo dentro de um novo array.
+This function calls another function, which is known as CALLBACK. The callback function that is called by the filter function contains a test, which applies it to each element of the array that calls the filter function. If its true, then this element is saved in another array.
 
-*Exemplos*
+*Exemples*
 
-Quero buscar, dentro de uma lista de nomes, somente aqueles que começam com uma letra em específico, por exemplo, com a letra 'C':
+I need to find, in a list of names, the ones that begins with a especific letter, for exemplo, a 'C':
 
 ``` 
 
@@ -24,7 +24,7 @@ console.log(selectedNames);
 
 ```
 
-Outro exemplo de aplicação da função filter seria em uma lista de alunos, buscar somente aqueles que foram aprovados:
+Another exemple could be to find, in a list of students, the ones that has been approved:
 
 ```
 let students = [
@@ -61,3 +61,94 @@ console.log(aproved);
 
 ```
 
+## Map 
+
+As the function *filter*, this function uses a CALLBACK as well, and it can manipulate the values of the array that calls it. It goes throu each element of the array, and applies the rule that has been defined on the callback function.
+
+_Examples:_
+
+```
+let numbers = [1, 2, 3, 4, 5, 6]
+
+let multiplicateEachNumber = numbers.map(function(item) {
+  return item * 2;
+})
+
+console.log(multiplicateEachNumber)
+```
+
+The script bellow does the same, but in another way:
+
+```
+
+let _multiplicateEachNumber = function(item) {
+  return item * 2;
+}
+console.log(numbers.map(_multiplicateEachNumber));
+```
+
+And here is another exemples, this time using objects. In this case, we have to do something else. 
+
+```
+let guests = [
+  {
+    name: "paula",
+    email: "paula@hotmail.com" 
+  }, 
+  {
+    name: "leandro",
+    email: "leandro@hotmail.com" 
+  }, 
+  {
+    name: "caroline",
+    email: "caroline@hotmail.com" 
+  }, 
+  {
+    name: "henrique",
+    email: "henrique@hotmail.com" 
+  }, 
+  ]
+
+let fixNames = guests.map(function(elem) {
+  return Object.assign(elem, {name: elem.name.charAt(0).toUpperCase() + elem.name.slice(1)})
+})
+
+console.log(fixNames)
+```
+In the return, we have to call the object and then inform the properties that we would like to update. Otherwise, if we don't do that, the proporties that hasn't been updated will be deleted. For that, we use Object.assign(element, property_that_we_are_going_to_chance).
+
+
+## Reduce
+
+As the others functions, the reduce function manipulate the elements of an array, but it also has an accumulator. This function is normally used to sum values of the elements in the array.
+
+*Exemple:*
+```
+let values = [ 2, 4, 6, 3, 5, 8, 10]
+
+let sum = values.reduce(function(total, item) {
+  return total + item
+})
+console.log(sum)
+```
+
+The function reduce can have 4 arguments: 
+	- total: this is the accumulator. It can hold a initial value, and accumalate the operation at each time callback is called.
+	- element: this is the actual element of the array.
+	- index: this the index of the actual element.
+	- array: the array that called the reduce function.
+
+Now, an exemple that passes all the arguments:
+
+```
+let values = [4, 56, 12, 6, 8, 45]
+
+let calculateAverage = values.reduce(function(total, item, index, array) {
+  total += item;
+  if (index === array.length - 1) {
+    return (total / array.length).toFixed(2);
+  }
+  return total
+})
+console.log(calculateAverage)
+```
