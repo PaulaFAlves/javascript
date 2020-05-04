@@ -1,4 +1,4 @@
-# Filter, map and reduce
+# FILTER, MAP AND REDUCE
 
 ## Filter
 
