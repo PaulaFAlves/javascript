@@ -14,9 +14,7 @@ let names = ['Paula', 'Leandro', 'Caroline', 'Henrique', 'Camila', 'Marcelo', 'A
 
 let letter = 'C';
 
-let selectNameWith = function(elem) {
-	return elem.charAt(0) == letter
-}
+let selectNameWith = (elem) => elem.charAt(0) == letter
 
 let selectedNames = names.filter(selectNameWith);
 
@@ -53,9 +51,7 @@ let students = [
 	},
 	]
 	
-let aproved = students.filter(function(elem) {
-	return elem.aproved
-	})
+let aproved = students.filter((elem) => elem.aproved);
 
 console.log(aproved);
 
@@ -121,7 +117,7 @@ As the others functions, the reduce function manipulate the elements of an array
 ```
 let values = [ 2, 4, 6, 3, 5, 8, 10]
 
-let sum = values.reduce(function(total, item) {
+let sum = values.reduce((total, item) => {
   return total + item
 })
 console.log(sum)
@@ -138,7 +134,7 @@ Now, an exemple that passes all the arguments:
 ```
 let values = [4, 56, 12, 6, 8, 45]
 
-let calculateAverage = values.reduce(function(total, item, index, array) {
+let calculateAverage = values.reduce((total, item, index, array) => {
   total += item;
   if (index === array.length - 1) {
     return (total / array.length).toFixed(2);

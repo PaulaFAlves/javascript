@@ -8,14 +8,17 @@
 </head>
 <body>
 	<script>
-		/* MAP
+		// MAP
+
 		let numbers = [1, 2, 3, 4, 5, 6]
 		let multiplicateEachNumber = numbers.map(function(item) {
   			return item * 2;
 		})
 		console.log(numbers) // initial array, no changes
 		console.log(multiplicateEachNumber) // new array
+
 		//
+
 		let guests = [
 		  {
 		    name: "paula alves",
@@ -36,7 +39,9 @@
 		})
 		console.log(guests)
 		console.log(fixNames)
+
 		//
+
 		let numbers = [1, 2, 3, 4, 5, 6]
 		let multiplicateEachNumber = numbers.map((item) => {
   			return item * 2;
@@ -48,28 +53,76 @@
   			return item * 2;
 		}
 		console.log(numbers.map(_multiplicateEachNumber));
-		*/
-				let guests = [
-		  {
-		    name: "paula alves",
-		  }, 
-		  {
-		    name: "leandro",
-		  }, 
-		  {
-		    name: "caroline",
-		  }, 
-		  {
-		    name: "henrique",
-		  }, 
-		  ]
+		
+		// FILTER
 
-		let fixNames = guests.map((elem) => {
-  			return elem.name.charAt(0).toUpperCase() + elem.name.slice(1)
-		})
-		console.log(guests)
-		console.log(fixNames)
+		let names = ['Paula', 'Leandro', 'Caroline', 'Henrique', 'Camila', 'Marcelo', 'Andressa', 'José'];
 
+		let letter = 'C';
+
+		let selectNameWith = (elem) => elem.charAt(0) == letter
+
+		let selectedNames = names.filter(selectNameWith);
+
+		console.log(selectedNames);
+		console.log(names);
+		
+		//
+
+		let students = [
+	{
+		"name": "Paula Alves",
+		"age": 38,
+		"aproved": true,
+	},
+	{
+		"name": "Leandro Ferri",
+		"age": 25,
+		"aproved": false,
+	},
+		{
+		"name": "Caroline Vanazzi",
+		"age": 26,
+		"aproved": true,
+	},	{
+		"name": "Henrique Barbosa",
+		"age": 12,
+		"aproved": false,
+	},	{
+		"name": "Alice Eismann",
+		"age": 1,
+		"aproved": true,
+	},
+	]
+
+	let aproved = students.filter((elem) => elem.aproved);
+	let aproved2 = students.map((elem) => elem.aproved);
+
+	console.log(aproved);
+	console.log(aproved2)
+	console.log(students);
+
+	// REDUCE
+
+	let values = [ 2, 4, 6, 3, 5, 8, 10]
+
+	let sum = values.reduce((total, item) => {
+	  return total + item
+	})
+	console.log(sum)
+
+	//
+
+	let values = [4, 56, 12, 6, 8, 45]
+
+	let calculateAverage = values.reduce((total, item, index, array) => {
+		total += item;
+		if (index === array.length - 1) {
+			return (total / array.length).toFixed(2);
+		}
+	return total
+	})
+	console.log(calculateAverage)
 	</script>
 </body>
 </html>
