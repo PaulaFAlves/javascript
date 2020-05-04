@@ -63,14 +63,14 @@ console.log(aproved);
 
 ## Map 
 
-As the function *filter*, this function uses a CALLBACK as well, and it can manipulate the values of the array that calls it. It goes throu each element of the array, and applies the rule that has been defined on the callback function.
+As the function *filter*, this function uses a CALLBACK as well, and it manipulates the values of an array. It goes through each element of the array, applies the rule that has been defined on the callback function, and save this new value in another array. In another words, map doesn't change the original array. 
 
 _Examples:_
 
 ```
 let numbers = [1, 2, 3, 4, 5, 6]
 
-let multiplicateEachNumber = numbers.map(function(item) {
+let multiplicateEachNumber = numbers.map((item) => {
   return item * 2;
 })
 
@@ -81,41 +81,36 @@ The script bellow does the same, but in another way:
 
 ```
 
-let _multiplicateEachNumber = function(item) {
-  return item * 2;
+let _multiplicateEachNumber = (item) => {
+		return item * 2;
 }
 console.log(numbers.map(_multiplicateEachNumber));
 ```
 
-And here is another exemples, this time using objects. In this case, we have to do something else. 
+Using MAP with objects is pretty much the same:			
 
 ```
-let guests = [
-  {
-    name: "paula",
-    email: "paula@hotmail.com" 
-  }, 
-  {
-    name: "leandro",
-    email: "leandro@hotmail.com" 
-  }, 
-  {
-    name: "caroline",
-    email: "caroline@hotmail.com" 
-  }, 
-  {
-    name: "henrique",
-    email: "henrique@hotmail.com" 
-  }, 
-  ]
+	let guests = [
+	  {
+	    name: "paula alves",
+	  }, 
+	  {
+	    name: "leandro",
+	  }, 
+	  {
+	    name: "caroline",
+	  }, 
+	  {
+	    name: "henrique",
+	  }, 
+	  ]
 
-let fixNames = guests.map(function(elem) {
-  return Object.assign(elem, {name: elem.name.charAt(0).toUpperCase() + elem.name.slice(1)})
-})
-
-console.log(fixNames)
+	let fixNames = guests.map((elem) => {
+			return elem.name.charAt(0).toUpperCase() + elem.name.slice(1)
+	})
+	console.log(guests)
+	console.log(fixNames)
 ```
-In the return, we have to call the object and then inform the properties that we would like to update. Otherwise, if we don't do that, the proporties that hasn't been updated will be deleted. For that, we use Object.assign(element, property_that_we_are_going_to_chance).
 
 
 ## Reduce
