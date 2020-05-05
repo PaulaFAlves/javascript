@@ -1,4 +1,4 @@
-# FILTER, MAP AND REDUCE
+<h1 align="center">FILTER, MAP AND REDUCE</h1>
 
 ## Filter
 
@@ -143,3 +143,5 @@ let calculateAverage = values.reduce((total, item, index, array) => {
 })
 console.log(calculateAverage)
 ```
+
+This developer is powered by  ☕ 

@@ -1,4 +1,4 @@
-## PROMISE
+<h1 align="center">PROMISE</h1>
 
 It's an object that can create a value in the future, and its function is to improve an asynchronous code. This value can be a success (resolve, if everything goes well) or not (reject, if something goes wrong). This returns represents the state os the promisse. 
 
@@ -38,14 +38,8 @@ p_reject.catch((err) => {
 
 // it was resolve
 // not resolved
-	
+
 ```
 
 
-
-<!-- 
-representa a conclusao de uma funcao assincrona, seja como sucesso ou com falha.
-funciona como callback ( callback = acao que vai ser executada assim que outra for concuida).
-callback -> funcao assincrona
-promise -> outra maneira de ver o callback
-async/await -> retorna uma promise -->
+This developer is powered by  ☕ 

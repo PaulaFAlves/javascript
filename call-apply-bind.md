@@ -1,4 +1,4 @@
-# CALL, APPLY AND BIND
+<h1 align="center">CALL, APPLY AND BIND</h1>
 
 _CALL and APPLY are methods that can change the value of "this"._
 
@@ -41,3 +41,4 @@ let calca = new Clothes('calca', 10);
 console.log(calca); // Object { name: "calca", price: 10, cathegory: "clothes" }
 ```
 
+This developer is powered by  ☕ 
