@@ -125,7 +125,7 @@
 	})
 	console.log(calculateAverage)
 
-*/
+
 	let p = new Promise((resolve, reject) => {
 		let x = 'the promise is done!';
 		resolve(x);
@@ -141,7 +141,21 @@
 	// 10
 	// 20
 	// 5
+*/
 
+	let p_resolve = Promise.resolve('it was resolved');
+	let p_reject = Promise.reject('not resolved');
+
+	p_resolve.then((result) => {
+		console.log(result);
+	});
+
+	p_reject.catch((err) => {
+		console.log(err);
+	});
+
+	// it was resolve
+	// not resolved
 
 
 

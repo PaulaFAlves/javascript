@@ -24,6 +24,23 @@ console.log(20);
 ```
 
 
+```
+let p_resolve = Promise.resolve('it was resolved');
+let p_reject = Promise.reject('not resolved');
+
+p_resolve.then((result) => {
+	console.log(result);
+});
+
+p_reject.catch((err) => {
+	console.log(err);
+});
+
+// it was resolve
+// not resolved
+	
+```
+
 
 
 <!-- 
