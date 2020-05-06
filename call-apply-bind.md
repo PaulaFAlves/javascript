@@ -1,12 +1,19 @@
 <h1 align="center">CALL, APPLY AND BIND</h1>
 
+<body font-size="10px">
+
 _CALL and APPLY are methods that can change the value of "this"._
 
-## Apply
+## WHAT IS APPLY?
+
 
 example: using math.max
 
-## Call
+
+## WHAT IS CALL?
+
+
+## For example:
 
 We want to catalog a list of products. Some properties of the product doesn't change, like the category, and others are different for each product.
 We a function Product to buid products, and it has the properties than will be changed:
@@ -41,4 +48,6 @@ let calca = new Clothes('calca', 10);
 console.log(calca); // Object { name: "calca", price: 10, cathegory: "clothes" }
 ```
 
+
 _This developer is powered by_ ☕ 
+</body>

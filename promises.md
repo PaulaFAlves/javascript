@@ -1,8 +1,13 @@
 <h1 align="center">PROMISE</h1>
+<body font-size="10px">
+
+## WHAT IS PROMISE?
+
 
 It's an object that can create a value in the future, and its function is to improve an asynchronous code. This value can be a success (resolve, if everything goes well) or not (reject, if something goes wrong). This returns represents the state os the promisse. 
 
-_Example:_
+
+## For example:
 
 ```
 let p = new Promise((resolve, reject) => {
@@ -43,3 +48,4 @@ p_reject.catch((err) => {
 
 
 _This developer is powered by ☕ _
+</body>

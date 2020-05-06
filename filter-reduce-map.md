@@ -1,10 +1,14 @@
 <h1 align="center">FILTER, MAP AND REDUCE</h1>
 
-## Filter
+<body font-size="10px">
+
+## WHAT IS FILTER?
+
 
 This function calls another function, which is known as CALLBACK. The callback function that is called by the filter function contains a test, which applies it to each element of the array that calls the filter function. If its true, then this element is saved in another array.
 
-*Exemples*
+
+## For example:
 
 I need to find, in a list of names, the ones that begins with a especific letter, for exemplo, a 'C':
 
@@ -57,11 +61,13 @@ console.log(aproved);
 
 ```
 
-## Map 
+## WHAT IS MAP?
+
 
 As the function *filter*, this function uses a CALLBACK as well, and it manipulates the values of an array. It goes through each element of the array, applies the rule that has been defined on the callback function, and save this new value in another array. In another words, map doesn't change the original array. 
 
-_Examples:_
+
+## For example:
 
 ```
 let numbers = [1, 2, 3, 4, 5, 6]
@@ -109,11 +115,14 @@ Using MAP with objects is pretty much the same:
 ```
 
 
-## Reduce
+## WHAT IS REDUCE?
+
 
 As the others functions, the reduce function manipulate the elements of an array, but it also has an accumulator. This function is normally used to sum values of the elements in the array.
 
-*Exemple:*
+
+## For example:
+
 ```
 let values = [ 2, 4, 6, 3, 5, 8, 10]
 
@@ -144,4 +153,6 @@ let calculateAverage = values.reduce((total, item, index, array) => {
 console.log(calculateAverage)
 ```
 
+
 _This developer is powered by_ ☕ 
+</body>

@@ -1,11 +1,14 @@
 <h1 align="center">CALLBACK</h1>
+<body font-size="8px">
 
-<<body font-size="10px">
+
+## What is a CALLBACK?
 	
 
+A **CALLBACK** is a function that will run after the function that calls it has finished. It a return function.
 
-A CALLBACK is a function that will run after the function that calls it has finished. It a return function.
-For example:
+
+## For example:
 
 ```
 function loadScript(srcValue, callback) {
@@ -22,7 +25,7 @@ Let me explain:
 2. he value in srcValue is passed to the property 'src' of the element 'script'
 3. we append this new elemento to the 'head' of our HTML
 4. when the element is settled, the callback is called.
-5. if we dont put 'script.onload' it is going to work, but we want this to work ONLY IF THE ELEMENT IS LOADED ON THE HEAD OF THE HTML.
+5. if we dont put 'script.onload' it is going to work, but we want this to work **ONLY IF THE ELEMENT IS LOADED ON THE HEAD OF THE HTML.**
 
 ```
 loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script => {  
@@ -41,6 +44,8 @@ loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', f
 });
 
 ```
+
+## More examples:
 
 
 
