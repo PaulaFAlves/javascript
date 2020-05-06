@@ -41,4 +41,4 @@ let calca = new Clothes('calca', 10);
 console.log(calca); // Object { name: "calca", price: 10, cathegory: "clothes" }
 ```
 
-This developer is powered by  ☕ 
+_This developer is powered by ☕ _
