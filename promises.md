@@ -1,51 +1,53 @@
 <h1 align="center">PROMISE</h1>
-<body font-size="10px">
+
 
 ## WHAT IS PROMISE?
 
 
-It's an object that can create a value in the future, and its function is to improve an asynchronous code. This value can be a success (resolve, if everything goes well) or not (reject, if something goes wrong). This returns represents the state os the promisse. 
+It's an object that can create a value in the future, and its function is to improve an asynchronous code.</br>
+Promises has two arguments, **resolve** and **reject**, and they are both callback functions, in other words, functions that will run after another(in this case, the promise).
+The result of the promisse will call resolve if it was successfull, or reject if an error occurred.</br> 
 
+So:
+	- resolve(value) -> value is the successfull return of the promise
+	- reject(error) -> error is an error object
+
+The promise has internal properties:
+
+	- STATE  -> pending, fulfilled or rejected
+	- RESULT -> undefined, "value" or "error"
+
+Like this:
+
+		* New promise = 
+					STATE:  pending
+					RESULT: undefined
+					* if result(value) =
+						STATE:  fulfilled
+						RESULT: value
+					* if reject(error) = 
+						STATE:  rejected
+						RESULT: error
 
 ## For example:
 
 ```
-let p = new Promise((resolve, reject) => {
-	let x = 'the promise is done!';
-	resolve(x);
-})
-
-console.log(10);
-
-p.then((x) => {
-	console.log(x)
-})
-
-console.log(20);
-// 10
-// 20
-// 5
+let promise = new Promise(function(resolve, reject) {
+		resolve(123)
+	});
+	promise.then(
+		result => console.log(result))
+```
+or:
 
 ```
-
-
-```
-let p_resolve = Promise.resolve('it was resolved');
-let p_reject = Promise.reject('not resolved');
-
-p_resolve.then((result) => {
-	console.log(result);
-});
-
-p_reject.catch((err) => {
-	console.log(err);
-});
-
-// it was resolve
-// not resolved
+	let promise = new Promise(function(resolve, reject) {
+		reject(new Error('Error'))
+	});
+	promise.then(
+		reject => console.log(reject))
 
 ```
 
 
 _This developer is powered by ☕ _
-</body>
