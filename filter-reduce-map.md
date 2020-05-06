@@ -144,4 +144,4 @@ let calculateAverage = values.reduce((total, item, index, array) => {
 console.log(calculateAverage)
 ```
 
-_This developer is powered by ☕ _
+_This developer is powered by_ ☕ 
